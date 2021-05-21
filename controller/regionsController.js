@@ -30,10 +30,10 @@ const findById = async (req, res, next) => {
 
     const { id: regionId } = req.params
 
-    const region = await Regions.findById({ region_id:regionId })
+    const region = await Regions.findById({ region_id: regionId })
 
-    if (!region) throw new ErrorResponse("Not Found",404)
-    
+    if (!region) throw new ErrorResponse("Not Found", 404)
+
     res.status(200).json({ data: region, success: true, msg: "Completed successfully" })
 
   } catch (error) {

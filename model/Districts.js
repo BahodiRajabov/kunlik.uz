@@ -29,7 +29,7 @@ class Districts {
   }
 
   static async findByRegionId({ region_id }) {
-    const district = await row(`
+    const district = await rows(`
       select
         district_name,
         district_id
