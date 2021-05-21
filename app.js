@@ -13,7 +13,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 // Static folders
-app.use("/assets", express.static("public"))
+app.use("/", express.static("public"))
 
 // upload middleware
 app.use(fileUpload())
@@ -22,11 +22,16 @@ app.use(fileUpload())
 app.use(cors({ origin: "*" }))
 
 // Express Application Settings
+app.set("view engine", "ejs")
 
 // Routes 
+app.get("/", (req, res) => {
+  res.render("index")
+})
+
 app.use("/api", api)
 
-app.use((err,req,res,next)=> {
+app.use((err, req, res, next) => {
   res.send(err)
   console.log(err);
 })
