@@ -31,7 +31,7 @@ const login = async (req, res, next) => {
     const user = await Users.findByPhoneNumber(body.phone_number)
     if (!user) throw new ErrorResponse("PHONE_NUMBER_OR_PASSWORD_IS_WRONG", 401)
 
-    const { is_valid: isValid } = await Users.comparePassword(validatedBody.password, user.password)
+    const { is_valid: isValid } = await Users.comparePassword(body.password, user.password)
     if (!isValid) throw new ErrorResponse("PHONE_NUMBER_OR_PASSWORD_IS_WRONG_", 401)
 
     req.user = user
