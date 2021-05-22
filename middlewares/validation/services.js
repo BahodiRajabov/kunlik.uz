@@ -1,8 +1,7 @@
 const Joi = require('joi');
 
 const schema = Joi.object().keys({
-    district_name: Joi.string().min(4).required(),
-    region_id: Joi.number().integer().required()
+    service_name: Joi.string().min(4).required(),
 })
 
 const validate = async (req, res, next) => {
