@@ -1,12 +1,344 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <title>Yordamchi qo'llar</title>
 </head>
+
 <body>
-  Hello this is main page, dildora opa and shirin opa shu pageni qilib beringlar :)
+    <header class="header profile-header">
+        <div class="container header-container">
+            <a class="logo" href="/">
+                Kunlik.UZ
+            </a>
+
+            <nav class="header-nav">
+                <ul class="header-list">
+                    <li class="header-item"><a href="/#search" class="header-link">Buyurtmalar</a></li>
+                    <li class="header-item"><a href="/create" class="header-link">Buyurtma berish</a></li>
+                    <li class="header-item"><a href="/#search" class="header-link">Ish topish</a></li>
+                </ul>
+                <a href="/register" class="header-login-link">Kirish</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="intro">
+            <div class="container intro-container">
+                <div class="intro-wrapper">
+                    <h2 class="intro-title">Hech kim ishsiz qolmaydi</h2>
+                    <p class="intro-text">Est ut velit aliquam sapien egestas hendrerit gravida. Sed tortor.</p>
+                    <div class="intro-links">
+                        <a href="/register" class="intro-link register-link">Ro’yxatdan o’tish</a>
+                        <a href="#search" class="intro-link jobsearch-link">Ish qidiring</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories-section">
+            <div class="container categories-contaier">
+                <h2>Bizda mavjud kategorilar</h2>
+                <ul class="categories-list">
+                </ul>
+            </div>
+        </section>
+
+
+        <section class="search" id="search">
+            <div class="container search-container">
+                <h2>Qidiruv bolimi</h2>
+                <form action="" class="searchjob-form" method="post">
+                    <div class="joined-inputs">
+                        <select class="searchjob-select joined-select" name="select-job">
+                            <option value="ish_kerak">Ish kerak</option>
+                            <option value="ish_kerak">Ishchi kerak</option>
+                        </select>
+
+                        <input class="searchjob-input" type="text" name="search-job-input" placeholder="Qidiring">
+                    </div>
+
+                    <select class="searchjob-select select-regions" name="region">
+                        <option value="hudud">Hudud</option>
+                    </select>
+
+                    <select class="searchjob-select select-services" name="speciality">
+                     <option value="soha">Soha</option>
+                    </select>
+                    <button class="search-button" type="submit"></button>
+                </form>
+
+                <div class="results-div">
+                    <ul class="results">
+                        <li class="result">
+                            <a href="" class="result-link">
+                                <div class="result-wrapper">
+                                    <img src="/images/result.jpg" alt="" class="result-img" width="200" height="196">
+                                    <div class="result-info">
+                                        <div class="result-top">
+                                            <h4 class="result-title">Devorni shkaturka qilish kerak (pishgan g’isht)
+                                            </h4>
+                                            <p class="result-direction">Qurilish</p>
+                                        </div>
+                                        <p class="result-text">In adipiscing scelerisque pulvinar vitae diam
+                                            pellentesque ipsum. Nisl pulvinar auctor tincidunt vitae. Commodo viverra
+                                            elit ultricies eget in velit sit ut. Sed vitae, mollis mauris volutpat
+                                            tellus hendrerit...</p>
+                                        <div class="result-bottom">
+                                            <div class="result-bottom-left">
+                                                <p class="result-price"><span>50000</span> so'm / kv</p>
+                                                <p class="result-address">Toshkent, Labzak 24-dom | 2 kun oldin</p>
+                                            </div>
+                                            <a href="+998975657173" class="result-phonenumber">+998 97 565 71 73</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="result">
+                            <a href="" class="result-link">
+                                <div class="result-wrapper">
+                                    <img src="/images/result.jpg" alt="" class="result-img" width="200" height="196">
+                                    <div class="result-info">
+                                        <div class="result-top">
+                                            <h4 class="result-title">Devorni shkaturka qilish kerak (pishgan g’isht)
+                                            </h4>
+                                            <p class="result-direction">Qurilish</p>
+                                        </div>
+                                        <p class="result-text">In adipiscing scelerisque pulvinar vitae diam
+                                            pellentesque ipsum. Nisl pulvinar auctor tincidunt vitae. Commodo viverra
+                                            elit ultricies eget in velit sit ut. Sed vitae, mollis mauris volutpat
+                                            tellus hendrerit...</p>
+                                        <div class="result-bottom">
+                                            <div class="result-bottom-left">
+                                                <p class="result-price"><span>50000</span> so'm / kv</p>
+                                                <p class="result-address">Toshkent, Labzak 24-dom | 2 kun oldin</p>
+                                            </div>
+                                            <a href="+998975657173" class="result-phonenumber">+998 97 565 71 73</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="result">
+                            <a href="" class="result-link">
+                                <div class="result-wrapper">
+                                    <img src="/images/result.jpg" alt="" class="result-img" width="200" height="196">
+                                    <div class="result-info">
+                                        <div class="result-top">
+                                            <h4 class="result-title">Devorni shkaturka qilish kerak (pishgan g’isht)
+                                            </h4>
+                                            <p class="result-direction">Qurilish</p>
+                                        </div>
+                                        <p class="result-text">In adipiscing scelerisque pulvinar vitae diam
+                                            pellentesque ipsum. Nisl pulvinar auctor tincidunt vitae. Commodo viverra
+                                            elit ultricies eget in velit sit ut. Sed vitae, mollis mauris volutpat
+                                            tellus hendrerit...</p>
+                                        <div class="result-bottom">
+                                            <div class="result-bottom-left">
+                                                <p class="result-price"><span>50000</span> so'm / kv</p>
+                                                <p class="result-address">Toshkent, Labzak 24-dom | 2 kun oldin</p>
+                                            </div>
+                                            <a href="+998975657173" class="result-phonenumber">+998 97 565 71 73</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <a class="more-link" href="#">Yana</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="workers-section">
+            <div class="container">
+                <h2>Platformadan ro'yxatdan o'tgan xodimlar</h2>
+                <ul class="workers">
+                    <li class="worker">
+                        <a href="" class="worker-link">
+                            <div class="worker-wrapper">
+                                <img class="worker-img" src="/images/worker.jpg" alt="worker" width="60" height="60">
+                                <div class="worker-info">
+                                    <p class="worker-name">John Doe</p>
+                                    <p class="worker-region">Sirdaryo</p>
+
+                                    <span class="worker-text">Quis turpis sed elit lobortis tempus gravida. Lectus proin
+                                        blandit potenti mi metus integer...</span>
+                                    <a href="" class="worker-more-link">To’liq o’qish</a>
+
+                                    <p class="worker-jobs">Quruvchilik, ustachilik, bog’bonlik</p>
+                                    <a href="+998975657173" class="worker-phone-number">+998 97 565 71 73</a>
+                                </div>
+                            </div>
+                        </a>
+
+                    </li>
+                    <li class="worker">
+                        <a href="" class="worker-link">
+                            <div class="worker-wrapper">
+                                <img class="worker-img" src="/images/worker.jpg" alt="worker" width="60" height="60">
+                                <div class="worker-info">
+                                    <p class="worker-name">John Doe</p>
+                                    <p class="worker-region">Sirdaryo</p>
+
+                                    <span class="worker-text">Quis turpis sed elit lobortis tempus gravida. Lectus proin
+                                        blandit potenti mi metus integer...</span>
+                                    <a href="" class="worker-more-link">To’liq o’qish</a>
+
+                                    <p class="worker-jobs">Quruvchilik, ustachilik, bog’bonlik</p>
+                                    <a href="+998975657173" class="worker-phone-number">+998 97 565 71 73</a>
+                                </div>
+                            </div>
+                        </a>
+
+                    </li>
+                    <li class="worker">
+                        <a href="" class="worker-link">
+                            <div class="worker-wrapper">
+                                <img class="worker-img" src="/images/worker.jpg" alt="worker" width="60" height="60">
+                                <div class="worker-info">
+                                    <p class="worker-name">John Doe</p>
+                                    <p class="worker-region">Sirdaryo</p>
+
+                                    <span class="worker-text">Quis turpis sed elit lobortis tempus gravida. Lectus proin
+                                        blandit potenti mi metus integer...</span>
+                                    <a href="" class="worker-more-link">To’liq o’qish</a>
+
+                                    <p class="worker-jobs">Quruvchilik, ustachilik, bog’bonlik</p>
+                                    <a href="+998975657173" class="worker-phone-number">+998 97 565 71 73</a>
+                                </div>
+                            </div>
+                        </a>
+
+                    </li>
+                    <li class="worker">
+                        <a href="" class="worker-link">
+                            <div class="worker-wrapper">
+                                <img class="worker-img" src="/images/worker.jpg" alt="worker" width="60" height="60">
+                                <div class="worker-info">
+                                    <p class="worker-name">John Doe</p>
+                                    <p class="worker-region">Sirdaryo</p>
+
+                                    <span class="worker-text">Quis turpis sed elit lobortis tempus gravida. Lectus proin
+                                        blandit potenti mi metus integer...</span>
+                                    <a href="" class="worker-more-link">To’liq o’qish</a>
+
+                                    <p class="worker-jobs">Quruvchilik, ustachilik, bog’bonlik</p>
+                                    <a href="+998975657173" class="worker-phone-number">+998 97 565 71 73</a>
+                                </div>
+                            </div>
+                        </a>
+
+                    </li>
+                    <li class="worker">
+                        <a href="" class="worker-link">
+                            <div class="worker-wrapper">
+                                <img class="worker-img" src="/images/worker.jpg" alt="worker" width="60" height="60">
+                                <div class="worker-info">
+                                    <p class="worker-name">John Doe</p>
+                                    <p class="worker-region">Sirdaryo</p>
+
+                                    <span class="worker-text">Quis turpis sed elit lobortis tempus gravida. Lectus proin
+                                        blandit potenti mi metus integer...</span>
+                                    <a href="" class="worker-more-link">To’liq o’qish</a>
+
+                                    <p class="worker-jobs">Quruvchilik, ustachilik, bog’bonlik</p>
+                                    <a href="+998975657173" class="worker-phone-number">+998 97 565 71 73</a>
+                                </div>
+                            </div>
+                        </a>
+
+                    </li>
+                    <li class="worker">
+                        <a href="" class="worker-link">
+                            <div class="worker-wrapper">
+                                <img class="worker-img" src="/images/worker.jpg" alt="worker" width="60" height="60">
+                                <div class="worker-info">
+                                    <p class="worker-name">John Doe</p>
+                                    <p class="worker-region">Sirdaryo</p>
+
+                                    <span class="worker-text">Quis turpis sed elit lobortis tempus gravida. Lectus proin
+                                        blandit potenti mi metus integer...</span>
+                                    <a href="" class="worker-more-link">To’liq o’qish</a>
+
+                                    <p class="worker-jobs">Quruvchilik, ustachilik, bog’bonlik</p>
+                                    <a href="+998975657173" class="worker-phone-number">+998 97 565 71 73</a>
+                                </div>
+                            </div>
+                        </a>
+
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <a class="logo" href="#">
+                <img src="/images/logo.svg" alt="logo" class="logo-img" width="87" height="24">
+            </a>
+            <p class="footer-center">“BazaraNet” 2021. Barcha huquqlar himoyalangan</p>
+            <p class="footer-right">Done by people</p>
+
+        </div>
+    </footer>
+    <template class="order-template">
+        <li class="result">
+            <a href="" class="result-link">
+                <div class="result-wrapper">
+                    <img src="/images/result.jpg" alt="" class="result-img" width="200" height="196">
+                    <div class="result-info">
+                        <div class="result-top">
+                            <h4 class="result-title">Devorni shkaturka qilish kerak (pishgan g’isht)
+                            </h4>
+                            <p class="result-direction">Qurilish</p>
+                        </div>
+                        <p class="result-text">In adipiscing scelerisque pulvinar vitae diam
+                            pellentesque ipsum. Nisl pulvinar auctor tincidunt vitae. Commodo viverra
+                            elit ultricies eget in velit sit ut. Sed vitae, mollis mauris volutpat
+                            tellus hendrerit...</p>
+                        <div class="result-bottom">
+                            <div class="result-bottom-left">
+                                <p class="result-price"><span>50000</span> so'm / kv</p>
+                                <p class="result-address">Toshkent, Labzak 24-dom | 2 kun oldin</p>
+                            </div>
+                            <a href="+998975657173" class="result-phonenumber">+998 97 565 71 73</a>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </template>
+    <template class="category-template">
+        <li class="categories-item" id="first-category">
+            <a class="categories-link" href="#search">
+                <div>
+                    <h3 class="categories-title">hello world</h3>
+                </div>
+            </a>
+        </li>
+    </template>
+
+    <template class="service-option-template">
+        <option value="soha">Soha</option>
+    </template>
+
+    <template class="region-option-template">
+        <option value="soha">Soha</option>
+    </template>
+
+
+    <script src="/js/main.js"></script>
 </body>
+
 </html>

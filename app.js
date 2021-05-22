@@ -13,7 +13,8 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 // Static folders
-app.use("/", express.static("public"))
+app.use(express.static("public"))
+app.use("/uploads",express.static("uploads"))
 
 // upload middleware
 app.use(fileUpload())
@@ -28,11 +29,27 @@ app.set("view engine", "ejs")
 app.get("/", (req, res) => {
   res.render("index")
 })
+app.get("/profile", (req, res) => {
+  res.render("profile")
+})
+app.get("/register", (req,  res) => {
+  res.render("register")
+})
+
+app.get("/create", (req,  res) => {
+  res.render("create-job")
+})
+
 
 app.use("/api", api)
 
 app.use((err, req, res, next) => {
-  res.send(err)
+  const error = {
+    msg:err.message || err.details[0].message,
+    success:false,
+    statusCode:400,
+  }
+  res.send(error)
   console.log(err);
 })
 

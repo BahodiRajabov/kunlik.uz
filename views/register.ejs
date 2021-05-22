@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <title>Signup</title>
+</head>
+<body>
+    <header class="header profile-header">
+        <div class="container header-container">
+            <a class="logo" href="/">
+                Kunlik.UZ
+            </a>
+
+            <nav class="header-nav">
+                <ul class="header-list">
+                    <li class="header-item"><a href="/#search" class="header-link">Buyurtmalar</a></li>
+                </ul>
+                <a href="/register" class="header-login-link">Kirish</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container b-signup-container">
+        <form class="register_form" action="#" method="POST">
+            <h2>Ro'yxatdan o'tish</h2>
+            <div class="b-names">
+                <input placeholder="Ismingiz" type="text" class="first_name" name="first_name">
+                <input placeholder="Familiyangiz" type="text" class="second_name" name="second_name">
+            </div>
+            <input placeholder="Telefon raqamingiz (+998903727207)" type="text" class="phone_number" name="phone_number">
+            <div class="password">
+                <input placeholder="*******" type="password" class="password_input" name="password"><br><br>
+            </div>
+            <p class="register-error"></p>
+            <input type="submit" value="Ro'yxatdan o'tish">
+        </form>
+    </div>
+    <script src="/js/register.js"></script>
+</body>
+</html>

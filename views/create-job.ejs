@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <title>Ish o'rni yaratish</title>
+</head>
+
+<body>
+    <header class="header profile-header">
+        <div class="container header-container">
+            <a class="logo" href="/">
+                Kunlik.UZ
+            </a>
+
+            <nav class="header-nav">
+                <ul class="header-list">
+                    <li class="header-item"><a href="/#search" class="header-link">Buyurtmalar</a></li>
+                    <li class="header-item"><a href="/create" class="header-link">Buyurtma berish</a></li>
+                    <li class="header-item"><a href="/#search" class="header-link">Ish topish</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container b-signup-container">
+        <!-- <h3 class="">Xizmat taklif qiling</h3> -->
+        <form class="b-order" action="#">
+            <h2>Buyurtma berish</h2>
+            <input class="b-order-input" name="b-order-name" type="text" placeholder="Xizmatning qisqa nomi">
+            <textarea class="b-order-textarea" placeholder="Xizmatning haqida batafsilroq..." name="textarea" id=""
+                cols="30" rows="5"></textarea>
+            <div class="b-selections-wrapper">
+                <div class="b-soha">
+                    <label for="soha-select">Soha</label>
+                    <select class="b-order-select" name="soha-select" id="soha-select">
+                        <option value="1">IT va Compyuter sohasi</option>
+
+                        <option value="2">Ustachilik va Quruvchilik</option>
+
+                        <option value="3">Qurilish va Ta'mirlash</option>
+
+                        <option value="4">Go'zallik va Kosmetolgiya</option>
+
+                        <option value="5">Ijodkorlik va hunarmandchilik</option>
+
+                        <option value="6">Uy yuritish va tozalash</option>
+
+                        <option value="7">Foto, Video, Audio</option>
+
+                        <option value="8">Tadbir tashkillashtirish</option>
+
+                        <option value="9">Boshqalar</option>
+                    </select>
+                </div>
+
+                <div class="b-hudud">
+                    <label for="hudud-select">Hudud</label>
+                    <select class="hudud-select" name="hudud-select" id="hudud-select">
+                        <option value="1">Toshkent</option>
+
+                        <option value="2">Buxoro</option>
+
+                        <option value="3">Sirdaryo</option>
+
+                        <option value="4">Surxandaryo</option>
+
+                        <option value="5">Qashqadaryo</option>
+
+                        <option value="6">Xorazm</option>
+
+                        <option value="7">Namangan</option>
+
+                        <option value="8">Andijon</option>
+
+                        <option value="9">Farg'ona</option>
+
+                        <option value="10">Samarqand</option>
+
+                        <option value="11">Navoiy</option>
+
+                        <option value="12">Jizzax</option>
+                    </select>
+                </div>
+
+                <div class="b-narx">
+                    <label for="narx-select">Narx</label>
+                    <input type="text" class="narx-select" id="narx-select" placeholder="12000">
+                </div>
+
+                <div class="b-narx">
+                    <label for="narx-select">Bujet turi</label>
+                    <input type="text" class="bujet-select" id="narx-select" placeholder="km, soat, servis">
+                </div>
+            </div>
+
+            <input type="file" id="image" class="image" placeholder="Rasm">
+            <p class="b-order-error"></p>
+            <input type="submit" value="Yakunlash">
+        </form>
+    </div>
+    <script src="/js/create.js"></script>
+</body>
+
+</html>

@@ -6,6 +6,7 @@ router.post("/", validateBody, orderController.create)
 router.get("/", orderController.findAll)
 router.get("/search", orderController.searchByTitle)
 router.get("/service/:id", orderController.searchByService)
+router.get("/region/:id", orderController.searchByRegions)
 router.get("/user/:id", orderController.findByUserId)
 
 module.exports = router

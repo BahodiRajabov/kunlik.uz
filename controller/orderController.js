@@ -1,6 +1,5 @@
 const Orders = require("../model/Orders")
 const ErrorResponse = require("../utils/errorResponse")
-const { v4: uuidv4 } = require('uuid');
 const path = require('path');
 
 const findAll = async (req, res, next) => {
@@ -17,8 +16,9 @@ const findAll = async (req, res, next) => {
 
 const searchByTitle = async (req, res, next) => {
   try {
-    const { limit, page, q } = req.query
-    const orders = await Orders.searchByTitle({ limit: limit || 10, page: page || 1, title: q })
+    const { limit, page } = req.query
+    
+    const orders = await Orders.searchByTitle({ limit: limit || 10, page: page || 1, title: req.query.q })
 
     res.status(200).json({ data: orders, success: true, msg: "Completed successfully" })
 
@@ -30,7 +30,19 @@ const searchByTitle = async (req, res, next) => {
 const searchByService = async (req, res, next) => {
   try {
     const { limit, page } = req.query
-    const orders = await Orders.searchByService({ limit: limit || 10, page: page || 1, s_service_id: req.params.id })
+    const orders = await Orders.searchByService({ limit: limit || 10, page: page || 1, service_id: req.params.id })
+
+    res.status(200).json({ data: orders, success: true, msg: "Completed successfully" })
+
+  } catch (error) {
+    next(error)
+  }
+}
+
+const searchByRegions = async (req, res, next) => {
+  try {
+    const { limit, page } = req.query
+    const orders = await Orders.searchByRegions({ limit: limit || 10, page: page || 1, region_id: req.params.id })
 
     res.status(200).json({ data: orders, success: true, msg: "Completed successfully" })
 
@@ -60,7 +72,7 @@ const create = async (req, res, next) => {
 
     let newOrder = req.body
 
-    const imageName = `uploads/${Date.now()}-${uuidv4()}`
+    const imageName = `uploads/${Date.now()}-${req.files.image.name}`
     await req.files.image.mv(path.join(__dirname, "../", imageName))
 
     newOrder.image_src = imageName
@@ -94,5 +106,6 @@ module.exports = {
   searchByService,
   deleteOne,
   searchByTitle,
+  searchByRegions,
   create
 }
